@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="742012fe-6476-4981-a7ec-394f284c6cce" name="Changes" comment="">
+    <list default="true" id="742012fe-6476-4981-a7ec-394f284c6cce" name="Changes" comment="fxied redux toolkit store">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +56,18 @@
       <workItem from="1741103349436" duration="90000" />
       <workItem from="1741171257393" duration="1297000" />
       <workItem from="1741180818284" duration="1731000" />
-      <workItem from="1741183538175" duration="2788000" />
+      <workItem from="1741183538175" duration="2978000" />
+      <workItem from="1741189366396" duration="376000" />
+      <workItem from="1741272670677" duration="2316000" />
     </task>
+    <task id="LOCAL-00001" summary="added redux toolkit store">
+      <created>1741189125205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741189125205</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added redux toolkit store" />
+    <option name="LAST_COMMIT_MESSAGE" value="added redux toolkit store" />
   </component>
 </project>
