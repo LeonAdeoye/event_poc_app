@@ -8,15 +8,15 @@ const orderDialogSlice = createSlice({
     name: 'orderDialog',
     initialState: initialState,
     reducers: {
-        open: (state) =>
+        openOrderDialog: (state) =>
         {
             state.isOpen = true;
         },
-        close: (state) => {
+        closeOrderDialog: (state) => {
             state.isOpen = false;
         }
     }
 });
 
 export default orderDialogSlice.reducer;
-export const { open, close } = orderDialogSlice.actions;
+export const { openOrderDialog, closeOrderDialog } = orderDialogSlice.actions;

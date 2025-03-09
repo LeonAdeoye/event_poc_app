@@ -3,14 +3,14 @@ import { AgGridReact } from 'ag-grid-react';
 import { useState} from "react";
 import { Button } from "@mui/material";
 import { useSelector, useDispatch} from "react-redux";
-import { addOrder, clearAll } from "./ordersSlice";
-import { open, close } from "./orderDialogSlice";
+import { clearAll } from "./ordersSlice";
+import { openOrderDialog } from "./orderDialogSlice";
+import OrderDialog from "./OrderDialog";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 const Orders = () => {
-    const orders = useSelector((state) => state.orders);
-    const isOpen = useSelector((state) => state.isOpen);
+    const orders = useSelector((state) => state.orders.orders);
     const canClearAll = useSelector((state) => state.orders.length === 0);
     const dispatch = useDispatch();
 
@@ -22,8 +22,7 @@ const Orders = () => {
     ]);
 
     const handleAddOrder = () => {
-        dispatch(open());
-        dispatch(addOrder({ symbol: "0005.HK", quantity: 5000, price: 29600, side: "BUY" }));
+        dispatch(openOrderDialog());
     }
 
     const handleClearAll = () => {
@@ -33,11 +32,12 @@ const Orders = () => {
     return (
         <div style={{ height: 500, width: '100%'}}>
             <AgGridReact
-                rowData={orders.orders}
+                rowData={orders}
                 columnDefs={colDefs}
             />
             <Button sx={{textTransform: 'capitalize'}} variant="contained" onClick={handleAddOrder}>Add Order</Button>
             <Button sx={{textTransform: 'capitalize'}} variant="contained" onClick={handleClearAll} disabled={canClearAll}>Clear All</Button>
+            <OrderDialog/>
         </div>
     )
 }
