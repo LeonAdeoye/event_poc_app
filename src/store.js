@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import ordersReducer from './ordersSlice';
 import orderDialogReducer from './orderDialogSlice';
 import {createLogger} from 'redux-logger';
+import {stateTrackerMiddleware} from "./stateTrackerMiddleware";
 
 const logger = createLogger();
 
@@ -10,7 +11,7 @@ const store = configureStore({
         orders: ordersReducer,
         orderDialog: orderDialogReducer,
     },
-    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(logger)
+    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(logger).concat(stateTrackerMiddleware)
 });
 
 export default store;
