@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import ordersReducer from './ordersSlice';
-import orderDialogReducer from './orderDialogSlice';
+import orderDialogReducer from './orderDialogSlice.js';
 import {createLogger} from 'redux-logger';
 import {stateTrackerMiddleware} from "./stateTrackerMiddleware";
 

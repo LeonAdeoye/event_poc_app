@@ -1,4 +1,4 @@
-import Orders from "./Orders";
+import Orders from "./Orders.jsx";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import {Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import {closeOrderDialog } from "./orderDialogSlice";
+import {closeOrderDialog } from "./orderDialogSlice.js";
 import {addOrder} from "./ordersSlice";
 import {useState} from "react";
 

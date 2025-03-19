@@ -4,8 +4,8 @@ import { useState} from "react";
 import { Button } from "@mui/material";
 import { useSelector, useDispatch} from "react-redux";
 import { clearAll } from "./ordersSlice";
-import { openOrderDialog } from "./orderDialogSlice";
-import OrderDialog from "./OrderDialog";
+import { openOrderDialog } from "./orderDialogSlice.js";
+import OrderDialog from "./OrderDialog.jsx";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
