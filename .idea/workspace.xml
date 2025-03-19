@@ -1,135 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="742012fe-6476-4981-a7ec-394f284c6cce" name="Changes" comment="converted project to use Vite." />
+    <list default="true" id="473cd473-d540-43bc-84fb-a48c8b4f5c96" name="Changes" comment="updated port to 3001">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2tqv9oVwOfGWUI4oVe1h6Bwfop4" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Leon Adeoye/development/event_poc_app.old",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="742012fe-6476-4981-a7ec-394f284c6cce" name="Changes" comment="" />
-      <created>1741092270427</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1741092270427</updated>
-      <workItem from="1741092272010" duration="647000" />
-      <workItem from="1741093035998" duration="4597000" />
-      <workItem from="1741103349436" duration="90000" />
-      <workItem from="1741171257393" duration="1297000" />
-      <workItem from="1741180818284" duration="1731000" />
-      <workItem from="1741183538175" duration="2978000" />
-      <workItem from="1741189366396" duration="376000" />
-      <workItem from="1741272670677" duration="3102000" />
-      <workItem from="1741505508345" duration="6220000" />
-      <workItem from="1741527701656" duration="2387000" />
-      <workItem from="1741617727116" duration="496000" />
-      <workItem from="1742028644019" duration="3485000" />
-      <workItem from="1742384830921" duration="609000" />
-      <workItem from="1742385477091" duration="664000" />
-    </task>
-    <task id="LOCAL-00001" summary="added redux toolkit store">
-      <created>1741189125205</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1741189125205</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added grid actions">
-      <created>1741275265066</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1741275265066</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add order dialog">
-      <created>1741512069734</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1741512069734</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added store middleware">
-      <created>1742032954148</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742032954148</updated>
-    </task>
-    <task id="LOCAL-00005" summary="converted project to use Vite.">
-      <created>1742386019836</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742386019836</updated>
-    </task>
-    <task id="LOCAL-00006" summary="converted project to use Vite.">
-      <created>1742386114206</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742386114206</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="added redux toolkit store" />
-    <MESSAGE value="added grid actions" />
-    <MESSAGE value="add order dialog" />
-    <MESSAGE value="added store middleware" />
-    <MESSAGE value="converted project to use Vite." />
-    <option name="LAST_COMMIT_MESSAGE" value="converted project to use Vite." />
   </component>
 </project>
