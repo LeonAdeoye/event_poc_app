@@ -1,17 +1,13 @@
-const stateHistory = [];
+const stateTrackerMiddleware = (store, pubSubManager) => next => action => {
+    //const prevState = store.getState();
+    //const result = next(action);
+    //const nextState = store.getState();
 
-const stateTrackerMiddleware = store => next => action => {
-    const prevState = store.getState();
-    const result = next(action);
-    const nextState = store.getState();
-
-    stateHistory.push({
-        prevState,
-        action,
-        nextState
+    pubSubManager.publish({
+        action
     });
 
     return result;
 };
 
-export { stateHistory, stateTrackerMiddleware };
+export { stateTrackerMiddleware };
