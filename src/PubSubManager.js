@@ -22,8 +22,8 @@ export class PubSubManager {
         this.client = new Client(this.instanceName);
         this.client.connect(this.connectionString).then(() => {
             console.log("Connected to AMPS.");
-            this.client.subscribe(() => {
-                console.log("Received message from AMPS.");
+            this.client.subscribe(({data}) => {
+                console.log("Received message from AMPS: " + JSON.stringify(data));
             }, this.inboundTopic)
             .then(() => {
                 console.log("Subscribed to " + this.inboundTopic);

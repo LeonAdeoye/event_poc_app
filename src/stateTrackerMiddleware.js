@@ -1,10 +1,12 @@
-const stateTrackerMiddleware = (store, pubSubManager) => next => action => {
-    //const prevState = store.getState();
-    //const result = next(action);
-    //const nextState = store.getState();
+const stateTrackerMiddleware = (pubSubManager) => (store) => (next) => (action) => {
+    const prevState = store.getState();
+    const result = next(action);
+    const nextState = store.getState();
 
     pubSubManager.publish({
-        action
+        prevState,
+        action,
+        nextState
     });
 
     return result;
