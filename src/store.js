@@ -4,14 +4,19 @@ import orderDialogReducer from './orderDialogSlice.js';
 import {createLogger} from 'redux-logger';
 import {stateTrackerMiddleware} from "./stateTrackerMiddleware";
 import { PubSubManager } from "./PubSubManager";
+import {configs} from './configs.js';
 
 const logger = createLogger();
 
-const initializePubSubManager = (instanceName, connectionString, inboundTopic, outboundTopic) => {
-    const pubSubManager = new PubSubManager(instanceName, connectionString, inboundTopic, outboundTopic);
-    pubSubManager.connect();
+const initializePubSubManager = () => {
+    const pubSubManager = new PubSubManager(configs.amps.instanceName,
+        configs.amps.connectionString, configs.amps.topics.inbound, configs.amps.topics.outbound);
+
+    pubSubManager.connect().then(() => {
+        console.log(`Connected to AMPS using instance name: [${pubSubManager.instanceName}] and connection string: [${pubSubManager.connectionString}] and subscribed to [${pubSubManager.inboundTopic}] topic and publishing to [${pubSubManager.outboundTopic}] topic.`);
+    });
     return pubSubManager;
-}
+};
 
 const store = configureStore({
     reducer: {
@@ -20,7 +25,8 @@ const store = configureStore({
     },
     middleware: getDefaultMiddleware => getDefaultMiddleware()
         .concat(logger)
-        .concat(stateTrackerMiddleware(initializePubSubManager("action-event-responder", "ws://localhost:9008/amps/json", "action-event-request", "action-event-response"))),
+        .concat(stateTrackerMiddleware(initializePubSubManager()))
 });
 
 export default store;
+
