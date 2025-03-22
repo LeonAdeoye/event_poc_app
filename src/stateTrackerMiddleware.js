@@ -1,6 +1,15 @@
-export const stateTrackerMiddleware = (pubSubManager) => {
+import {PubSubManager} from "./PubSubManager.js";
+import {configs} from "./configs.js";
+
+export const stateTrackerMiddleware = () => {
     return store => {
-        // Set up the action callback to handle incoming messages
+        const pubSubManager = new PubSubManager(configs.amps.instanceName, configs.amps.connectionString,
+            configs.amps.topics.inbound, configs.amps.topics.outbound);
+
+        pubSubManager.connect().then(() => {
+            console.log(`Connected to AMPS using instance name: [${pubSubManager.instanceName}] and connection string: [${pubSubManager.connectionString}] and subscribed to [${pubSubManager.inboundTopic}] topic and publishing to [${pubSubManager.outboundTopic}] topic.`);
+        });
+
         pubSubManager.setActionCallback((actions) => {
             actions.forEach(action => {
                 store.dispatch({
@@ -15,7 +24,7 @@ export const stateTrackerMiddleware = (pubSubManager) => {
         });
 
         return next => async action => {
-            // Only publish state changes for actions that came from AMPS
+            // Only publish state changes for actions that came from AMPS.
             if (action.meta?.fromAMPS) {
                 const prevState = store.getState();
                 const result = next(action);
@@ -28,7 +37,7 @@ export const stateTrackerMiddleware = (pubSubManager) => {
                 });
                 return result;
             }
-            return next(action); // For non-AMPS actions, just pass them through without publishing
+            return next(action); // For non-AMPS actions, just pass them through without publishing.
         };
     };
 }; 
