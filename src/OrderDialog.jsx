@@ -42,23 +42,23 @@ const OrderDialog = () => {
         <div>
             <Dialog open={isOpen}>
                 <DialogTitle>Add New Order</DialogTitle>
-                <DialogContent>
-                    <div>
-                        <TextField size="small" required label="Symbol" variant="outlined" onChange={handleSymbolChange}/>
+                <DialogContent  style={{ height: '250px', width: '400px'}}>
+                    <div className="my-2">
+                        <TextField style={{ width: '350px'}} size="small" required label="Symbol" variant="outlined" onChange={handleSymbolChange}/>
+                    </div>
+                    <div className="my-2">
+                        <TextField style={{ width: '350px'}} size="small" required label="Side" variant="outlined" onChange={handleSideChange} />
+                    </div>
+                    <div className="my-2">
+                        <TextField style={{ width: '350px'}} size="small" required label="Price" variant="outlined" onChange={handlePriceChange}/>
                     </div>
                     <div>
-                        <TextField size="small" required label="Side" variant="outlined" onChange={handleSideChange} />
-                    </div>
-                    <div>
-                        <TextField size="small" required label="Price" variant="outlined" onChange={handlePriceChange}/>
-                    </div>
-                    <div>
-                        <TextField size="small" required label="Quantity" variant="outlined" onChange={handleQuantityChange}/>
+                        <TextField style={{ width: '350px'}} size="small" required label="Quantity" variant="outlined" onChange={handleQuantityChange}/>
                     </div>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleCancel}>Cancel</Button>
-                    <Button onClick={handleAddOrder}>Add Order</Button>
+                    <Button variant="contained" onClick={handleCancel}>Cancel</Button>
+                    <Button variant="contained" onClick={handleAddOrder}>Add Order</Button>
                 </DialogActions>
             </Dialog>
         </div>

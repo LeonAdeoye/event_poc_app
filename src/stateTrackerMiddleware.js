@@ -16,7 +16,7 @@ export const stateTrackerMiddleware = () => {
                     type: action.action,
                     payload: action.payload,
                     // Mark this action as coming from AMPS
-                    meta: {
+                    metadata: {
                         fromAMPS: true
                     }
                 });
@@ -25,14 +25,15 @@ export const stateTrackerMiddleware = () => {
 
         return next => async action => {
             // Only publish state changes for actions that came from AMPS.
-            if (action.meta?.fromAMPS) {
+            if (action.metadata?.fromAMPS) {
                 const prevState = store.getState();
                 const result = next(action);
                 const nextState = store.getState();
-
+                // Remove metadata from the action
+                const {metadata, ...actionToSend} = action;
                 await pubSubManager.publish({
                     previousState: prevState,
-                    action: action,
+                    action: actionToSend,
                     nextState: nextState
                 });
                 return result;
