@@ -11,7 +11,6 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 
 const Orders = () => {
     const orders = useSelector((state) => state.orders.orders);
-    const canClearAll = useSelector((state) => state.orders.length === 0);
     const dispatch = useDispatch();
 
     const [colDefs] = useState([
@@ -30,13 +29,13 @@ const Orders = () => {
     }
 
     return (
-        <div style={{ height: 500, width: '100%'}}>
+        <div style={{ marginTop: 10, marginLeft: 10, height: 500, width: '99%'}}>
             <AgGridReact
                 rowData={orders}
                 columnDefs={colDefs}
             />
-            <Button sx={{textTransform: 'capitalize'}} variant="contained" onClick={handleAddOrder}>Add Order</Button>
-            <Button sx={{textTransform: 'capitalize'}} variant="contained" onClick={handleClearAll} disabled={canClearAll}>Clear All</Button>
+            <Button sx={{textTransform: 'capitalize', marginTop: 1, marginRight: 1}} variant="contained" onClick={handleAddOrder}>Add Order</Button>
+            <Button sx={{textTransform: 'capitalize', marginTop: 1, marginRight: 1}} variant="contained" onClick={handleClearAll} disabled={orders.length === 0}>Clear All</Button>
             <OrderDialog/>
         </div>
     )
